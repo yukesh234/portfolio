@@ -1,0 +1,229 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Upper section */
+.upper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 60px 0;
+    text-align: center;
+}
+
+.upper .desc p {
+    color: #7df9ff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.title h1 {
+    font-size: 56px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff, #7df9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -2px;
+}
+
+/* Two Column Layout */
+.resume-content {
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+/* Section Titles */
+.section-title {
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #7df9ff, transparent);
+}
+
+/* Education Section */
+.education-section {
+    flex: 0 0 60%;
+}
+
+.education-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Timeline line */
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #7df9ff, rgba(125, 249, 255, 0.2));
+}
+
+.education-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(125, 249, 255, 0.1);
+    border-radius: 15px;
+}
+
+/* Timeline dot */
+.education-item::before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: 30px;
+    width: 12px;
+    height: 12px;
+    background: #7df9ff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(125, 249, 255, 0.5);
+}
+
+.edu-year {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(125, 249, 255, 0.1);
+    border: 1px solid rgba(125, 249, 255, 0.3);
+    border-radius: 20px;
+    color: #7df9ff;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.edu-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.edu-school {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.edu-location {
+    font-size: 14px;
+    color: #7df9ff;
+    font-weight: 500;
+}
+
+/* Skills Section */
+.skills-section {
+    flex: 0 0 40%;
+}
+
+.skills-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skillcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+    gap: 12px;
+    border: 1px solid rgba(125, 249, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(125, 249, 255, 0.5);
+}
+.skillcard:hover{
+    border: 1px solid rgba(125, 249, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.skillname p {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.skillicon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .resume-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .education-section {
+        flex: 1;
+    }
+    
+    .skills-section {
+        flex: 1;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .title h1 {
+        font-size: 42px;
+    }
+    
+    .section-title h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 640px) {
+    .education-timeline {
+        padding-left: 20px;
+    }
+    
+    .education-item::before {
+        left: -26px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
