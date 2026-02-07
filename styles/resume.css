@@ -2,6 +2,17 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+    animation: slideIn 1s ease-out;
+}
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Upper section */

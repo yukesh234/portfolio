@@ -142,6 +142,10 @@
     font-weight: 600;
     transition: all 0.2s ease;
 }
+.techdetails ul li a {
+    color: #7df9ff;
+    text-decoration: none;
+}
 
 .techdetails ul li:hover {
     background: rgba(125, 249, 255, 0.1);
